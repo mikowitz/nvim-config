@@ -92,7 +92,15 @@ return packer.startup(function(use)
   use {
     "phaazon/hop.nvim",
     config = function()
-      require'hop'.setup { keys = "aoeuhtns" }
+      require('hop').setup { keys = "aoeuhtns" }
+    end
+  }
+
+  -- commenting
+  use {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
     end
   }
 

@@ -82,12 +82,17 @@ nvim_tree.setup {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
+        { key = "-", action = "" }
       },
     },
-    number = true,
+    number = false,
     relativenumber = false,
   },
-  quit_on_open = 1,
+  actions = {
+    open_file = {
+      quit_on_open = true
+    }
+  },
   git_hl = 1,
   disable_window_picker = 0,
   root_folder_modifier = ":t",
@@ -97,3 +102,4 @@ local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
 
 map("n", "-", ":NvimTreeFindFile<CR>", opts)
+map("n", "<C-n>", ":NvimTreeClose<CR>", opts)
