@@ -5,6 +5,15 @@ end
 
 telescope.load_extension('media_files')
 
+telescope.setup {
+  extensions = {
+    media_files = {
+      filetypes = {"png", "pdf", "jpg", "jpeg"},
+      find_cmd = "rg"
+    }
+  }
+}
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 

@@ -44,3 +44,4 @@ set.termguicolors = true
 -- clipboard
 set.clipboard = "unnamedplus"
 
+vim.g.python3_host_prog = "/home/mikowitz/.asdf/shims/python3"
