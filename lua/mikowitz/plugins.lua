@@ -109,6 +109,8 @@ return packer.startup(function(use)
 
   use "tpope/vim-surround"
 
+  use "tpope/vim-projectionist"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
