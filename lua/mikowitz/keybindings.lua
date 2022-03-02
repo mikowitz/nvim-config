@@ -30,3 +30,7 @@ map("n", "<leader><space>", ":nohlsearch<CR>", opts)
 -- indent in visual mode, stay in visual mode
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
+
+vim.cmd [[
+  autocmd BufWritePre * %s/\s\+$//e
+]]

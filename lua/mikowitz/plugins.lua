@@ -104,6 +104,11 @@ return packer.startup(function(use)
     end
   }
 
+  -- formatting
+  use "sbdchd/neoformat"
+
+  use "tpope/vim-surround"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
