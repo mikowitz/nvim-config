@@ -41,6 +41,9 @@ set.smartcase = true
 
 set.termguicolors = true
 
+set.splitright = true
+set.splitbelow = true
+
 -- clipboard
 set.clipboard = "unnamedplus"
 

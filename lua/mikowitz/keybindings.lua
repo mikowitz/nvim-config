@@ -9,6 +9,12 @@ map("n", "<C-l>", "<C-w>l", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 
+-- easy resizing
+map("n", "<Up>", ":resize -2<CR>", opts)
+map("n", "<Down>", ":resize +2<CR>", opts)
+map("n", "<Left>", ":vertical resize -2<CR>", opts)
+map("n", "<Right>", ":vertical resize +2<CR>", opts)
+
 -- line navigation
 map("n", "j", "gj", opts)
 map("n", "k", "gk", opts)
@@ -16,10 +22,6 @@ map("n", "k", "gk", opts)
 -- buffer nav
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
-
--- resizing
--- try these out?
-map("n", "<C-Up>", ":resize +2<CR>", opts)
 
 -- exit insert
 map("i", "jk", "<C-[>", opts)

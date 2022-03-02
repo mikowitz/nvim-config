@@ -36,11 +36,14 @@ packer.init {
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- have packer manage itself
+  use "kyazdani42/nvim-web-devicons"
 
   -- colorschemes
   use "cocopon/iceberg.vim"
   use "NLKNguyen/papercolor-theme"
   use "lunarvim/darkplus.nvim"
+  use "lunarvim/onedarker.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- completion
   use "hrsh7th/nvim-cmp"
@@ -73,26 +76,20 @@ return packer.startup(function(use)
 
   -- nvim-tree
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    },
+    "kyazdani42/nvim-tree.lua",
     config = function() require'nvim-tree'.setup {} end
   }
 
   -- lualine
   use {
     "nvim-lualine/lualine.nvim",
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    },
   }
 
   -- hop.nvim
   use {
     "phaazon/hop.nvim",
     config = function()
-      require('hop').setup { keys = "aoeuhtns" }
+      require("hop").setup { keys = "aoeuhtns" }
     end
   }
 
@@ -110,6 +107,15 @@ return packer.startup(function(use)
   use "tpope/vim-surround"
 
   use "tpope/vim-projectionist"
+
+  use "akinsho/toggleterm.nvim"
+
+  use {
+    "rcarriga/vim-ultest",
+    requires = { "vim-test/vim-test" },
+    run = ":UpdateRemotePlugins"
+  }
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

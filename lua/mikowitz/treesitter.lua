@@ -3,8 +3,6 @@ if not status_ok then
   return
 end
 
-print("ok from treesitter")
-
 configs.setup {
   ensure_installed = "maintained",
   sync_install = false,
