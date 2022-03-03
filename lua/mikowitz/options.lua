@@ -1,6 +1,7 @@
 local set = vim.opt
 
 -- no backups
+set.updatecount = 0
 set.backup = false
 set.writebackup = false
 set.undofile = true
