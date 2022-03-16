@@ -119,6 +119,11 @@ return packer.startup(function(use)
 
 
   use "andymass/vim-matchup"
+  use "kana/vim-textobj-user"
+  use "andyl/vim-textobj-elixir"
+
+  use 'elixir-editors/vim-elixir'
+  use 'slashmili/alchemist.vim'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
