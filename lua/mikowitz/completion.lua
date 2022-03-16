@@ -57,22 +57,22 @@ cmp.setup {
       c = cmp.mapping.close(),
     },
     ["<CR>"] = cmp.mapping.confirm { select = true },
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
+    -- ["<Tab>"] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   elseif luasnip.expandable() then
+    --     luasnip.expand()
+    --   elseif luasnip.expand_or_jumpable() then
+    --     luasnip.expand_or_jump()
+    --   elseif check_backspace() then
+    --     fallback()
+    --   else
+    --     fallback()
+    --   end
+    -- end, {
+    --   "i",
+    --   "s",
+    -- }),
   },
   formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -81,17 +81,17 @@ cmp.setup {
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
-        luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        luasnip = "[Snippet]",
       })[entry.source.name]
       return vim_item
     end,
   },
   sources = {
     { name = "nvim_lsp" },
-    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    -- { name = "luasnip" },
   }
 }

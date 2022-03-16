@@ -222,6 +222,11 @@ _G.packer_plugins = {
     path = "/home/mikowitz/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["vim-matchup"] = {
+    loaded = true,
+    path = "/home/mikowitz/.local/share/nvim/site/pack/packer/start/vim-matchup",
+    url = "https://github.com/andymass/vim-matchup"
+  },
   ["vim-projectionist"] = {
     loaded = true,
     path = "/home/mikowitz/.local/share/nvim/site/pack/packer/start/vim-projectionist",

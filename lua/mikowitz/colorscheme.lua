@@ -1,16 +1,16 @@
 vim.cmd [[
-  " set background=dark
+  set background=dark
   " colorscheme iceberg
-  " colorscheme onedarker
+  colorscheme duskfox
 ]]
 
-local nightfox = require("nightfox")
-
-nightfox.setup({
-  fox = "duskfox",
-  transparent = true,
-})
-
-nightfox.load()
-
--- .load("duskfox")
+-- local nightfox = require("nightfox")
+--
+-- nightfox.setup({
+--   fox = "duskfox",
+--   transparent = true,
+-- })
+--
+-- nightfox.load()
+--
+-- -- .load("duskfox")

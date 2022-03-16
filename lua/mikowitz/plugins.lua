@@ -118,6 +118,8 @@ return packer.startup(function(use)
   }
 
 
+  use "andymass/vim-matchup"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
