@@ -4,7 +4,6 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "maintained",
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
   highlight = {
@@ -14,6 +13,7 @@ configs.setup {
   },
   indent = { enable = true, disable = { "yaml" } },
   autotag = {
-    enable = true
+    enable = true,
+    filetypes = { "html", "eelixir" }
   },
 }

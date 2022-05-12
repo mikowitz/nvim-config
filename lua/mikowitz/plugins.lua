@@ -78,7 +78,6 @@ return packer.startup(function(use)
   -- nvim-tree
   use {
     "kyazdani42/nvim-tree.lua",
-    config = function() require'nvim-tree'.setup {} end
   }
 
   -- lualine
@@ -109,8 +108,6 @@ return packer.startup(function(use)
 
   use "tpope/vim-projectionist"
 
-  use "akinsho/toggleterm.nvim"
-
   use {
     "rcarriga/vim-ultest",
     requires = { "vim-test/vim-test" },
@@ -124,6 +121,23 @@ return packer.startup(function(use)
 
   use 'elixir-editors/vim-elixir'
   use 'slashmili/alchemist.vim'
+
+  use 'alvan/vim-closetag'
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup()
+    end
+  }
+
+  use { "iamcco/markdown-preview.nvim",
+    run = "cd app && yarn install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" }
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

@@ -20,7 +20,6 @@ vim.g.nvim_tree_icons = {
     arrow_closed = "",
   },
 }
-vim.g.nvim_tree_indent_markers = 1
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -43,14 +42,9 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
   diagnostics = {
     enable = true,
     icons = {
@@ -75,7 +69,6 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = false,
     mappings = {
       custom_only = false,
       list = {
@@ -91,11 +84,9 @@ nvim_tree.setup {
   actions = {
     open_file = {
       quit_on_open = true
+
     }
   },
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
 }
 
 local opts = { noremap = true, silent = true }
