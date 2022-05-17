@@ -109,7 +109,7 @@ return packer.startup(function(use)
 
   use "tpope/vim-projectionist"
 
-  use "akinsho/toggleterm.nvim"
+  -- use "akinsho/toggleterm.nvim"
 
   use {
     "rcarriga/vim-ultest",
@@ -124,6 +124,11 @@ return packer.startup(function(use)
 
   use 'elixir-editors/vim-elixir'
   use 'slashmili/alchemist.vim'
+
+  use 'pangloss/vim-javascript'
+  use 'leafgarland/typescript-vim'
+
+  use 'iamcco/markdown-preview.nvim'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
